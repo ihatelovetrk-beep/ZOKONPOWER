@@ -18,6 +18,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1751677672485756');
 fbq('track', 'PageView');
 </script>
+
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1751677672485756&ev=PageView&noscript=1"/>
@@ -25,122 +26,142 @@ src="https://www.facebook.com/tr?id=1751677672485756&ev=PageView&noscript=1"/>
 <!-- End Meta Pixel Code -->
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:#efefef;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    padding:20px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+background:linear-gradient(135deg,#f2f2f2,#e6e6e6);
 }
 
 .card{
-    background:#fff;
-    width:100%;
-    max-width:520px;
-    border-radius:35px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
+width:100%;
+max-width:420px;
+background:#fff;
+padding:30px 25px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .profile{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:5px solid red;
-    object-fit:cover;
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #ff0000;
+margin-bottom:20px;
 }
 
 .title{
-    font-size:42px;
-    font-weight:900;
-    margin:25px 0;
-    color:#111;
+font-size:26px;
+font-weight:800;
+color:#111;
+line-height:1.3;
+margin-bottom:25px;
 }
 
 .btn{
-    display:block;
-    background:#1565c0;
-    color:#fff;
-    text-decoration:none;
-    padding:20px;
-    border-radius:50px;
-    font-size:22px;
-    font-weight:700;
-    margin:20px 0;
-    transition:.3s;
+display:block;
+width:100%;
+background:#1565c0;
+color:#fff;
+text-decoration:none;
+padding:16px;
+border-radius:50px;
+font-size:20px;
+font-weight:700;
+margin:18px 0;
+transition:.3s;
 }
 
 .btn:hover{
-    transform:scale(1.03);
+transform:translateY(-2px);
+}
+
+.timer-box{
+margin:20px 0;
 }
 
 .timer{
-    font-size:52px;
-    font-weight:bold;
-    color:#ff3366;
-    letter-spacing:4px;
-    margin-top:20px;
+font-size:34px;
+font-weight:800;
+color:#ff3b75;
+letter-spacing:2px;
 }
 
 .labels{
-    display:flex;
-    justify-content:space-around;
-    margin-top:10px;
-    color:#ff00ff;
-    font-weight:bold;
+display:flex;
+justify-content:space-between;
+margin-top:8px;
+padding:0 8px;
+font-size:12px;
+font-weight:700;
+color:#ff00ff;
 }
 
 .footer{
-    margin-top:35px;
-    font-size:20px;
-    font-weight:700;
+margin-top:25px;
+font-size:16px;
+font-weight:700;
 }
 
 .footer span{
-    color:#ff3366;
+color:#ff3b75;
 }
 
-@media(max-width:600px){
-    .title{
-        font-size:28px;
-    }
+@media(max-width:480px){
 
-    .timer{
-        font-size:38px;
-    }
-
-    .btn{
-        font-size:18px;
-    }
+.title{
+font-size:22px;
 }
+
+.timer{
+font-size:28px;
+}
+
+.btn{
+font-size:18px;
+padding:15px;
+}
+
+}
+
 </style>
 </head>
-
 <body>
 
 <div class="card">
 
-<img class="profile"
-src="https://d1yei2z3i6k35z.cloudfront.net/17601983/6a25acde452002.76529979_1436.png">
+<img
+class="profile"
+src="https://d1yei2z3i6k35z.cloudfront.net/17601983/6a25acde452002.76529979_1436.png"
+alt="Profile">
 
-<h1 class="title">‼️ 𝗔𝗡𝗔𝗦𝗟𝗜𝗬𝗘 𝗭𝗢𝗞𝗢𝗡 ‼️</h1>
+<h1 class="title">
+‼️ ANASLIYE ZOKON ‼️
+</h1>
 
-<a class="btn"
+<a
+class="btn"
 href="https://t.me/+kwSpDKZA8O0xZmJl"
 onclick="fbq('track','Lead');">
 ✈️ Join Free Telegram
 </a>
 
-<div class="timer" id="countdown">00 : 00 : 00 : 10</div>
+<div class="timer-box">
+<div class="timer" id="countdown">
+00:00:00:10
+</div>
 
 <div class="labels">
 <span>DAYS</span>
@@ -148,8 +169,10 @@ onclick="fbq('track','Lead');">
 <span>MINUTES</span>
 <span>SECONDS</span>
 </div>
+</div>
 
-<a class="btn"
+<a
+class="btn"
 href="https://t.me/+kwSpDKZA8O0xZmJl"
 onclick="fbq('track','Lead');">
 ✈️ Join Free Telegram
@@ -162,23 +185,27 @@ Ads managed by <span>@DxZokon</span>
 </div>
 
 <script>
+
 let seconds = 10;
 
 const timer = setInterval(() => {
 
-    document.getElementById("countdown").innerHTML =
-        `00 : 00 : 00 : ${String(seconds).padStart(2,'0')}`;
+document.getElementById("countdown").innerHTML =
+`00:00:00:${String(seconds).padStart(2,'0')}`;
 
-    seconds--;
+seconds--;
 
-    if(seconds < 0){
-        clearInterval(timer);
+if(seconds < 0){
 
-        window.location.href =
-        "https://t.me/+kwSpDKZA8O0xZmJl";
-    }
+clearInterval(timer);
+
+window.location.href =
+"https://t.me/+kwSpDKZA8O0xZmJl";
+
+}
 
 },1000);
+
 </script>
 
 </body>
