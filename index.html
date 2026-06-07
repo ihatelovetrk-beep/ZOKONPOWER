@@ -23,121 +23,124 @@ fbq('track', 'PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1751677672485756&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
+background:#f2f2f2;
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 padding:20px;
-background:linear-gradient(135deg,#f2f2f2,#e6e6e6);
 }
 
 .card{
 width:100%;
 max-width:420px;
 background:#fff;
-padding:30px 25px;
 border-radius:30px;
+padding:30px 20px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .profile{
-width:140px;
-height:140px;
+width:150px;
+height:150px;
 border-radius:50%;
 object-fit:cover;
-border:5px solid #ff0000;
+border:5px solid red;
 margin-bottom:20px;
 }
 
 .title{
-font-size:26px;
+font-size:28px;
 font-weight:800;
 color:#111;
-line-height:1.3;
 margin-bottom:25px;
+line-height:1.3;
 }
 
-.btn{
+.telegram-btn{
 display:block;
 width:100%;
+padding:18px;
 background:#1565c0;
 color:#fff;
 text-decoration:none;
-padding:16px;
-border-radius:50px;
-font-size:20px;
+font-size:22px;
 font-weight:700;
-margin:18px 0;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-}
-
-.timer-box{
+border-radius:50px;
 margin:20px 0;
 }
 
-.timer{
-font-size:34px;
-font-weight:800;
-color:#ff3b75;
-letter-spacing:2px;
+.telegram-btn:hover{
+opacity:.95;
 }
 
-.labels{
-display:flex;
-justify-content:space-between;
-margin-top:8px;
-padding:0 8px;
-font-size:12px;
+.countdown{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin:25px 0;
+}
+
+.box{
+background:#fafafa;
+border-radius:15px;
+padding:15px 5px;
+border:1px solid #eee;
+}
+
+.num{
+font-size:32px;
+font-weight:800;
+color:#ff3366;
+}
+
+.label{
+font-size:11px;
 font-weight:700;
-color:#ff00ff;
+color:#d600ff;
+margin-top:5px;
 }
 
 .footer{
-margin-top:25px;
-font-size:16px;
+margin-top:20px;
+font-size:18px;
 font-weight:700;
 }
 
 .footer span{
-color:#ff3b75;
+color:#ff3366;
 }
 
 @media(max-width:480px){
 
 .title{
-font-size:22px;
+font-size:24px;
 }
 
-.timer{
-font-size:28px;
-}
-
-.btn{
+.telegram-btn{
 font-size:18px;
-padding:15px;
+padding:16px;
+}
+
+.num{
+font-size:26px;
 }
 
 }
-
 </style>
 </head>
+
 <body>
 
 <div class="card">
@@ -152,27 +155,38 @@ alt="Profile">
 </h1>
 
 <a
-class="btn"
+class="telegram-btn"
 href="https://t.me/+kwSpDKZA8O0xZmJl"
 onclick="fbq('track','Lead');">
 ✈️ Join Free Telegram
 </a>
 
-<div class="timer-box">
-<div class="timer" id="countdown">
-00:00:00:10
+<div class="countdown">
+
+<div class="box">
+<div class="num">00</div>
+<div class="label">DAYS</div>
 </div>
 
-<div class="labels">
-<span>DAYS</span>
-<span>HOURS</span>
-<span>MINUTES</span>
-<span>SECONDS</span>
+<div class="box">
+<div class="num">00</div>
+<div class="label">HOURS</div>
 </div>
+
+<div class="box">
+<div class="num">00</div>
+<div class="label">MINUTES</div>
+</div>
+
+<div class="box">
+<div class="num" id="seconds">10</div>
+<div class="label">SECONDS</div>
+</div>
+
 </div>
 
 <a
-class="btn"
+class="telegram-btn"
 href="https://t.me/+kwSpDKZA8O0xZmJl"
 onclick="fbq('track','Lead');">
 ✈️ Join Free Telegram
@@ -186,16 +200,16 @@ Ads managed by <span>@DxZokon</span>
 
 <script>
 
-let seconds = 10;
+let sec = 10;
 
 const timer = setInterval(() => {
 
-document.getElementById("countdown").innerHTML =
-`00:00:00:${String(seconds).padStart(2,'0')}`;
+document.getElementById("seconds").innerText =
+String(sec).padStart(2,"0");
 
-seconds--;
+sec--;
 
-if(seconds < 0){
+if(sec < 0){
 
 clearInterval(timer);
 
